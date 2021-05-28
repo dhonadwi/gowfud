@@ -1,0 +1,140 @@
+@media screen and (min-width: 650px) {
+  .jumbotron {
+    width: 100%;
+    position: relative;
+  }
+  .jumbotron img {
+    max-height: 150px;
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+  }
+  .jumbotron h2 {
+    position: absolute;
+    color: white;
+    text-shadow: 2px 2px black;
+    top: 5px;
+    left: 25px;
+    background-color: rgba(238, 160, 160, 0.5);
+    border-radius: 5px;
+    padding: 15px;
+    font-size: 1.5em;
+  }
+
+  .detailContainer {
+    display: grid;
+    /* grid-template-columns: repeat(4, 1fr); */
+    grid-template-columns: 1fr 1fr;
+    row-gap: 10px;
+    column-gap: 10px;
+  }
+
+  .detailImg img {
+    max-height: 200px;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .detailContainer .detailImg {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    margin: 0;
+    padding: 0;
+  }
+
+  .detailReview {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    /* background-color: blue; */
+  }
+
+  .restaurants {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 25px;
+    row-gap: 5px;
+  }
+  .app-bar {
+    grid-template-columns: 1fr auto;
+    padding: 8px 32px;
+  }
+
+  .app-bar .app-bar_brand h1 {
+    font-size: 1.5em;
+  }
+
+  .app-bar .app-bar_menu {
+    display: none;
+  }
+
+  .app-bar .app-bar_navigation {
+    position: static;
+    width: 100%;
+  }
+
+  .app-bar .app-bar_navigation ul li {
+    display: inline-block;
+  }
+
+  .app-bar .app-bar_navigation ul li a {
+    display: inline-block;
+    width: 120px;
+    text-align: center;
+    margin: 0;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .detailContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    /* grid-template-rows: 1fr 1fr 4fr; */
+    row-gap: 10px;
+    column-gap: 10px;
+  }
+
+  .detailContainer .detailImg {
+    margin: 0;
+    padding: 0;
+    grid-column-start: 1;
+    grid-column-end: 4;
+  }
+
+  .detailDrinks {
+    grid-column-start: 3;
+    grid-column-end: 4;
+  }
+
+  .detailReview {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    /* background-color: blue; */
+  }
+
+  .detailImg img {
+    max-height: 200px;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .restaurants {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 25px;
+    row-gap: 5px;
+  }
+
+  .app-bar .app-bar_brand h1 {
+    font-size: 2em;
+  }
+  .jumbotron h2 {
+    position: absolute;
+    color: white;
+    text-shadow: 2px 2px black;
+    top: 5px;
+    left: 25px;
+    background-color: rgba(238, 160, 160, 0.5);
+    border-radius: 5px;
+    padding: 15px;
+  }
+}
