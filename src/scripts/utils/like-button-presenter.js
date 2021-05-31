@@ -1,6 +1,6 @@
 import swal from 'sweetalert';
 import FavoriteRestaurantIdb from '../data/restaurants-idb';
-import { createLikeButtonTemplate, createLikedButtonTemplate } from '../views/templates/template-creator';
+import { createLikeRestaurantButtonTemplate, createUnlikeRestaurantButtonTemplate } from '../views/templates/template-creator';
 
 const LikeButtonPresenter = {
   async init({ likeButtonContainer, restaurant }) {
@@ -25,7 +25,7 @@ const LikeButtonPresenter = {
   },
 
   renderLike() {
-    this.likeButtonContainer.innerHTML = createLikeButtonTemplate();
+    this.likeButtonContainer.innerHTML = createLikeRestaurantButtonTemplate();
 
     const likeButton = document.querySelector('#likeButton');
     likeButton.addEventListener('click', async () => {
@@ -36,7 +36,7 @@ const LikeButtonPresenter = {
   },
 
   renderLiked() {
-    this.likeButtonContainer.innerHTML = createLikedButtonTemplate();
+    this.likeButtonContainer.innerHTML = createUnlikeRestaurantButtonTemplate();
 
     const likeButton = document.querySelector('#likeButton');
     likeButton.addEventListener('click', async () => {
