@@ -2,8 +2,16 @@ import FavoriteRestaurantIdb from '../src/scripts/data/restaurants-idb';
 import LikeButtonInitiator from './../src/scripts/utils/like-button-initiator';
 
 describe('Liking A Restaurant', () => {
-  it('should show the like button when the restaurant has not been liked before', async () => {
+  const addLikeButtonContainer = () => {
     document.body.innerHTML = '<div id="likeButtonContainer"></div>';
+  };
+
+  beforeEach(() => {
+    addLikeButtonContainer();
+  });
+
+  it('should show the like button when the restaurant has not been liked before', async () => {
+    // document.body.innerHTML = '<div id="likeButtonContainer"></div>';
     await LikeButtonInitiator.init({
       likeButtonContainer: document.querySelector('#likeButtonContainer'),
       restaurant: {
@@ -14,7 +22,7 @@ describe('Liking A Restaurant', () => {
       .toBeTruthy();
   });
   it('should not show the unlike button when the restaurant has not been liked before', async () => {
-    document.body.innerHTML = '<div id="likeButtonContainer"></div>';
+    //document.body.innerHTML = '<div id="likeButtonContainer"></div>';
     await LikeButtonInitiator.init({
       likeButtonContainer: document.querySelector('#likeButtonContainer'),
       restaurant: {
@@ -26,7 +34,7 @@ describe('Liking A Restaurant', () => {
       .toBeFalsy();
   });
   it('should be able to like the restaurant', async () => {
-    document.body.innerHTML = '<div id="likeButtonContainer"></div>';
+    //document.body.innerHTML = '<div id="likeButtonContainer"></div>';
     await LikeButtonInitiator.init({
       likeButtonContainer: document.querySelector('#likeButtonContainer'),
       restaurant: {
