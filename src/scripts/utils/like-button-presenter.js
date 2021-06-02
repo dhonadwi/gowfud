@@ -1,5 +1,4 @@
 import swal from 'sweetalert';
-// import FavoriteRestaurantIdb from '../data/restaurants-idb';
 import { createLikeRestaurantButtonTemplate, createUnlikeRestaurantButtonTemplate } from '../views/templates/template-creator';
 
 const LikeButtonPresenter = {
@@ -21,7 +20,6 @@ const LikeButtonPresenter = {
   },
 
   async isRestaurantExist(id) {
-    // const restaurant = await FavoriteRestaurantIdb.getRestaurant(id);
     const restaurant = await this.favoriteRestaurant.getRestaurant(id);
     return !!restaurant;
   },
