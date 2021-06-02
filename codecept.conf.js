@@ -11,7 +11,7 @@ exports.config = {
     Puppeteer: {
       url: 'http://localhost:8080',
       show: true,
-      windowSize: '1200x900'
+      windowSize: '800x600'
     }
   },
   include: {
@@ -19,7 +19,7 @@ exports.config = {
   },
   bootstrap: null,
   mocha: {},
-  name: 'HasilSubmisi2Ke3',
+  name: 'gowfud',
   plugins: {
     pauseOnFail: {},
     retryFailedStep: {
