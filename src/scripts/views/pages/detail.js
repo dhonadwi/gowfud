@@ -3,6 +3,7 @@ import Restaurants from '../../data/restaurants-source';
 import { createRestaurantDetailTemplate } from '../templates/template-creator';
 import LikeButtonPresenter from '../../utils/like-button-presenter';
 import SaveButtonInitiator from '../../utils/save-button-initiator';
+import FavoriteRestaurantIdb from '../../data/restaurants-idb';
 
 const DetailPage = {
   async render() {
@@ -34,6 +35,7 @@ const DetailPage = {
 
       await LikeButtonPresenter.init({
         likeButtonContainer: document.querySelector('#likeButtonContainer'),
+        favoriteRestaurant: FavoriteRestaurantIdb,
         restaurant: {
           id,
           name,
