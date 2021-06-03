@@ -11,11 +11,9 @@
   }
   .jumbotron h2 {
     position: absolute;
-    color: white;
-    text-shadow: 2px 2px black;
     top: 5px;
     left: 25px;
-    background-color: rgba(238, 160, 160, 0.5);
+    background-color: white;
     border-radius: 5px;
     padding: 15px;
     font-size: 1.5em;
@@ -129,11 +127,9 @@
   }
   .jumbotron h2 {
     position: absolute;
-    color: white;
-    text-shadow: 2px 2px black;
     top: 5px;
     left: 25px;
-    background-color: rgba(238, 160, 160, 0.5);
+    background-color: white;
     border-radius: 5px;
     padding: 15px;
   }

@@ -38,7 +38,7 @@ const createRestaurantDetailTemplate = (result) => {
     rating += `<i class="fa fa-star"></i>`;
   }
   return `<div class='detailContainer'>
-<div class='detailItem detailImg'><img crossorigin='anonymous' src='${CONFIG.BASE_IMAGE_URL_SMALL + result.restaurant.pictureId}' alt='Picture Resto' width='100%'><h3 tabindex='0'>${nameResto}</h3><p tabindex='0'>${result.restaurant.address}, ${result.restaurant.city}</p><p tabindex='0';>Rating: <span style="color: orange">${rating}</span></p>
+<div class='detailItem detailImg'><img class="lazyload" crossorigin='anonymous' data-src='${CONFIG.BASE_IMAGE_URL_SMALL + result.restaurant.pictureId}' alt='Picture Resto' width='100%'><h3 tabindex='0'>${nameResto}</h3><p tabindex='0'>${result.restaurant.address}, ${result.restaurant.city}</p><p tabindex='0';>Rating: <span style="color: orange">${rating}</span></p>
 <p tabindex='0'>Category : ${categoryOne} ${categoryTwo}</p>
 </div>
 <div tabindex='0' class='detailItem'>Foods
@@ -63,8 +63,8 @@ const createRestaurantDetailTemplate = (result) => {
 
 const createRestaurantItemTemplate = (restaurant) => `
 <div class='card' style='position: relative'><a href="${`#/detail/${restaurant.id}`}">
-<img crossorigin='anonymous' src='${CONFIG.BASE_IMAGE_URL_SMALL + restaurant.pictureId}' alt='Picture Resto' style='border-radius: 5px; width: 100%' ></a>
-<div style='background: #334443; position: absolute; top: 20px; padding: 5px; background-color: rgba(238, 160, 160, 0.8);border-radius: 5px; width:50%'>
+<img class="lazyload" crossorigin='anonymous' data-src='${CONFIG.BASE_IMAGE_URL_SMALL + restaurant.pictureId}' alt='Picture Resto' style='border-radius: 5px; width: 100%' ></a>
+<div style='background: #334443; position: absolute; top: 20px; padding: 5px; background-color: white;border-radius: 5px; width:50%'>
 <a href="${`#/detail/${restaurant.id}`}"><h3>${restaurant.name}</h3></a>
 <a href="${`#/detail/${restaurant.id}`}"><p>${restaurant.city}</p></a>
 </div>

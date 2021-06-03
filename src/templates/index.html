@@ -20,7 +20,7 @@
   <a href="#items" class="skip-link">Skip to contents</a>
   <header class="app-bar">
     <div class="app-bar_menu">
-      <button id="hamburgerButton"><i class="fa fa-bars" crossorigin="anonymous"></i></button>
+      <button id="hamburgerButton" aria-label="menu"><i class="fa fa-bars" crossorigin="anonymous"></i></button>
     </div>
     <div class="app-bar_brand">
       <a href="/">
@@ -36,7 +36,14 @@
     </nav>
   </header>
   <div class="jumbotron">
-    <img src="./images/hero-image.jpg" alt="Logo GowFud" crossorigin="anonymous">
+    <picture>
+      <source media="(max-width: 650px)" srcset="./images/hero-image-small.jpg">
+      <img 
+          src='./images/hero-image-large.jpg' 
+          alt="Logo Gowfud"></img>
+  
+    </picture>
+    <!-- <img src="./images/hero-image.jpg" alt="Logo GowFud" crossorigin="anonymous"> -->
     <h2>Talk Less Eat More with GOWFUD</h2>
   </div>
   <main id="mainContent">
