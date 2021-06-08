@@ -43,10 +43,13 @@
 .jumbotron {
   position: relative;
   margin: 0 auto;
+  width: 100%;
+  position: relative;
 }
 
 .jumbotron img {
   max-height: 200px;
+  height: 200;
   object-fit: cover;
   object-position: center;
   width: 100%;
@@ -81,7 +84,6 @@ body {
   position: sticky;
   top: 0;
   z-index: 99;
-  /* box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2); */
 }
 
 .app-bar .app-bar_menu {
@@ -155,7 +157,6 @@ main {
 
 .detailContainer {
   display: grid;
-  /* grid-template-columns: repeat(4, 1fr); */
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
   row-gap: 10px;
@@ -213,20 +214,27 @@ main {
   padding: 20px;
   margin-top: 20px;
   background: linear-gradient(to bottom, #ded0e7, #f4eee8);
-  /* color: white; */
   position: relative;
-  /* z-index: -10; */
   text-decoration: none;
 }
-.card p {
+.restoItem {
+  border: 2px solid red;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  padding: 20px;
+  position: relative;
+}
+
+/* .restoItem .description {
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
   -webkit-line-clamp: 2; /* number of lines to show */
-  -webkit-box-orient: vertical;
-}
+  /* -webkit-box-orient: vertical; */
+  /* padding: 1px; */
+/* } */
 
-.card a,
+.restoItem a,
 p {
   text-decoration: none;
   color: black;
@@ -237,7 +245,6 @@ footer {
 
 footer p {
   text-align: center;
-  /* color: #aaaa; */
 }
 
 .like {

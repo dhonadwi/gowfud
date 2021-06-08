@@ -15,11 +15,9 @@
 /* coloring */
 .box1,
 .box5 {
-  /* background-color: mediumseagreen; */
   background-color: #51caf3;
   box-shadow: 0 4px 8px 0 #161d6f;
   border-radius: 5px;
-  color: white;
   text-align: center;
 }
 

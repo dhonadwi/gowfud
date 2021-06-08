@@ -37,41 +37,47 @@ const createRestaurantDetailTemplate = (result) => {
   for (let i = 0; i < Math.floor(result.restaurant.rating); i++) {
     rating += `<i class="fa fa-star"></i>`;
   }
-  return `<div class='detailContainer'>
-<div class='detailItem detailImg'><img class="lazyload" crossorigin='anonymous' data-src='${CONFIG.BASE_IMAGE_URL_SMALL + result.restaurant.pictureId}' alt='Picture Resto' width='100%'><h3 tabindex='0'>${nameResto}</h3><p tabindex='0'>${result.restaurant.address}, ${result.restaurant.city}</p><p tabindex='0';>Rating: <span style="color: orange">${rating}</span></p>
-<p tabindex='0'>Category : ${categoryOne} ${categoryTwo}</p>
-</div>
-<div tabindex='0' class='detailItem'>Foods
-<p>${menuFood}</p>
-</div>
-<div tabindex='0' class='detailItem detailDrinks'>Drinks
-<p>${menuDrink}</p>
-</div>
-<div tabindex='0' class='detailItem detailReview'>Reviews${review}</div>
-<div tabindex='0' class='detailItem'><div class='cardItem'>
-</form>
-<input type='text' id='inputName' name='inputName' placeholder='  Yourname'>
-<input type='text' id='inputReview' name='inputReview' placeholder='  Your Review'>
+  return `
+  <div class='detailContainer'>
+  <div class='detailItem detailImg'><img class='lazyload' crossorigin='anonymous'
+      data-src='${CONFIG.BASE_IMAGE_URL_SMALL + result.restaurant.pictureId}' alt='Picture Resto' width='100%'
+      height='200'>
+    <h3 tabindex='0'>${nameResto}</h3>
+    <p tabindex='0'>${result.restaurant.address}, ${result.restaurant.city}</p>
+    <p tabindex='0' ;>Rating: <span style="color: orange">${rating}</span></p>
+    <p tabindex='0'>Category : ${categoryOne} ${categoryTwo}</p>
+  </div>
+  <div tabindex='0' class='detailItem'>Foods
+    <p>${menuFood}</p>
+  </div>
+  <div tabindex='0' class='detailItem detailDrinks'>Drinks
+    <p>${menuDrink}</p>
+  </div>
+  <div tabindex='0' class='detailItem detailReview'>Reviews${review}</div>
+  <div tabindex='0' class='detailItem'>
+    <div class='cardItem'>
+      </form>
+      <input type='text' id='inputName' name='inputName' placeholder='  Yourname'>
+      <input type='text' id='inputReview' name='inputReview' placeholder='  Your Review'>
 
-<button type='submit' id='saveButton'>Submit</button>
-</form>
-</div>
-</div>
+      <button type='submit' id='saveButton'>Submit</button>
+      </form>
+    </div>
+  </div>
 </div>
 `;
 };
 
 const createRestaurantItemTemplate = (restaurant) => `
-<div class='card' style='position: relative'><a href="${`#/detail/${restaurant.id}`}">
-<img class="lazyload" crossorigin='anonymous' data-src='${CONFIG.BASE_IMAGE_URL_SMALL + restaurant.pictureId}' alt='Picture Resto' style='border-radius: 5px; width: 100%' ></a>
-<div style='background: #334443; position: absolute; top: 20px; padding: 5px; background-color: white;border-radius: 5px; width:50%'>
-<a href="${`#/detail/${restaurant.id}`}"><h3>${restaurant.name}</h3></a>
-<a href="${`#/detail/${restaurant.id}`}"><p>${restaurant.city}</p></a>
-</div>
+<div class='restoItem'>
+<a href="${`#/detail/${restaurant.id}`}">
+<img class="lazyload" crossorigin='anonymous' data-src='${CONFIG.BASE_IMAGE_URL_SMALL + restaurant.pictureId}' alt='Picture Resto' style="border-radius: 5px; width: 100%; height: 100; object-fit: contain"></a>
+<a href="${`#/detail/${restaurant.id}`}"><h2>${restaurant.name}</h2></a>
+<a href="${`#/detail/${restaurant.id}`}"><h3>${restaurant.city}</h3></a>
 <a href="${`#/detail/${restaurant.id}`}"><p>Rating: ${restaurant.rating}</p></a>
-<a href="${`#/detail/${restaurant.id}`}"><p>${restaurant.description}</p></a></a>
+<a href="${`#/detail/${restaurant.id}`}"><p>${restaurant.description.substring(0, 100)}...</p></a>
 </div>
-  `;
+`;
 
 const createLikeRestaurantButtonTemplate = () => `
 <button aria-label="like this restaurant" id="likeButton" class="like">
@@ -94,7 +100,7 @@ const creatAboutTemplate = () => `
     <p tabindex="0">We serve Better</p>
   </div>
   <div class="box2">
-    <img src="./images/hero-image.jpg" alt="Pic about Us" width="100%">
+    <img src="../icons/hero-image-about.png" alt="Pic about Us" width="225px" height="150px">
   </div>
   <div class="box3">
     <p tabindex="0">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est facilis ipsam quia esse laudantium eos? Id,
@@ -114,16 +120,16 @@ const creatAboutTemplate = () => `
       dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet.</p>
   </div>
   <div class="box6"><a href="https://www.linkedin.com/in/dhona-dwi/">
-      <img src="../icons/linkedin_icon.png" alt="linkedin_icon"></a>
+      <img src="../icons/linkedin_icon.png" alt="linkedin_icon" width="72px" height="72px"></a>
     <h4 tabindex="0">Dhona Dwi</h4>
   </div>
   <div class="box7"><a href="https://instagram.com/dhona.dwi">
-  <img src="../icons/instagram_icon.png" alt="linkedin_icon"></a>
+  <img src="../icons/instagram_icon.png" alt="linkedin_icon" width="72px" height="72px"></a>
     <h4 tabindex="0">Dhona Dwi</h4>
   </div>
   <div class="box8">
     <a href="https://facebook.com/odonslank">
-    <img src="../icons/facebook_icon.png" alt="linkedin_icon"></a>
+    <img src="../icons/facebook_icon.png" alt="linkedin_icon" width="72px" height="72px"></a>
     <h4 tabindex="0">Dhona Dwi</h4>
   </div>
 </div>
